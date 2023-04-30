@@ -1,10 +1,10 @@
 # Title (replace with your title)
 
-Introductory paragraph (replace this with your text)
+Today I will be diving into a concise summary of regular expressions. A regex, or regular expression, is a string of text that allows a user to create patterns that aid in matching, locating, and handling text. Regular expressions define a search pattern that is intended to be used in pattern matching with strings or string matching, such as "find and replace" operations. Regular expressions can save you hundreds of hours if you work with text or need to parse massive volumes of data into a computer. These expressions can also be used from the command line or in text editors to find text within a file.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
 ## Table of Contents
 
@@ -37,4 +37,4 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+If you have questions, please send them [here](mailto:marleysue@gmail.com?subject=[GitHub]%20Dev%20Connect) or visit [github/marleyschneiderr](https://github.com/marleyschneiderr). My name is Marley Schneider, and I am a 23-year-old full-stack web developer in training. I graduated from Washington State University in May 2022 with a double major in Advertising and Web Development and am now pursuing a certificate in Web Development through this course. I aspire to be a UX/UI designer who designs websites that are both useful and visually appealing. 
