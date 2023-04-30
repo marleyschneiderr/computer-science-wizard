@@ -1,4 +1,4 @@
-# Title (replace with your title)
+# Regular Expressions (Regex) Tutorial: Matching an Email
 
 Today I will be diving into a concise summary of regular expressions. A regex, or regular expression, is a string of text that allows a user to create patterns that aid in matching, locating, and handling text. Regular expressions define a search pattern that is intended to be used in pattern matching with strings or string matching, such as "find and replace" operations. Regular expressions can save you hundreds of hours if you work with text or need to parse massive volumes of data into a computer. These expressions can also be used from the command line or in text editors to find text within a file.
 
