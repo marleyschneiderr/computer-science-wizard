@@ -25,7 +25,11 @@ Email addresses are validated using this regular expression. The email address i
 
 ### Anchors
 
-The first anchor used in this regular expression is the `^` (caret) character. The `^` character signifies the start of the entire email string. It ensures that the pattern must match the beginning of the string, and nothing that comes before it. 
+Anchors are special characters that match the position of the input string, rather than matching any specific character. 
+
+Example: `\g` - This anchor can match at both the beginning of the string or the postion that immediately follows the end of the previous match. The `\g` syntax is used as a modifier to specify a recursive pattern, which can then be used to match nested constructs. For example, `/\((?:[^()]*|\g<0>)*\)/;` - The regular expression matches the outermost pair of parentheses and their contents using a capturing group with the `\g` modifier. The `|\g<0>` pattern recursively uses the capturing group to match ANY nested parentheses upon input.
+
+The first anchor used in the email regular expression is the `^` (caret) character. The `^` character signifies the start of the entire email string. It ensures that the pattern must match the beginning of the string, and nothing that comes before it. 
 
 The second anchor used in this regular expression is the `$` character. The $ character signifies the end of the entire email string. It makes sure that the pattern must match the end of the string, and nothing that comes after it.
 
@@ -34,6 +38,8 @@ Together, the `^` and `$` characters symbolize the start and end of the email st
 ### Quantifiers
 
 Quantifiers are special characters that allow the user to specify how many times a character or group of characters must appear in the input in order for a match to be detected. Individual characters, character classes, groupings, and even other quantifiers can use these characters. 
+
+Example: `*` - An asterisk matches the preceding character/group 0 or more times. For example, the regular expression `/ab*c/` matches "ac", "abc", "abbc", "abbbc", and so on.
 
 Throughout the matching an email regex, there are three quantifiers used:
 
@@ -59,9 +65,9 @@ In the email sequence, there are 3 examples of grouping constructs:
 
 ### Bracket Expressions
 
-There are three bracket expressions throughout the matching an email regex.
-
 Example: `[0-9]` is a strong example of a bracket expression. This character type corresponds to any single digit from 0 to 9. For example, the regular expression `/[0-9]+/` would match any sequence or input of one or more numbers, such as 456 or 9, but not 1a2e4r. 
+
+There are three bracket expressions throughout the matching an email regex.
 
 1) `[a-z0-9_\.-]+`: This character class matches one or more lowercase letters, numerals, underscores, dots (periods), or dashes in the email address before the @ sign. The + sign after the bracket expression means that there must be at least one character in this character class. 
 
@@ -119,8 +125,8 @@ In the email sequence, there are four character escapes used:
 
 4) `\[ and \]`: This character escape matches a square bracket character. The square brackets are used as literal characters and are also escaped with a backslash.
 
-Note: Some of these character escapes are used within character classes (i.e., inside square brackets), where they have slightly different meanings than outside of character classes. For example, the dot `.` matches a literal dot (period) within a character class, but it matches any character except a newline outside of a character class.
+Note: Some of these character escapes are used within character classes (i.e., inside square brackets), where they have slightly different meanings when outside of their character classes. For example, the dot `.` matches a literal dot (period) within a character class, but it matches any character except a newline outside of a character class.
 
 ## Author
 
-If you have questions, please send them [here](mailto:marleysue@gmail.com?subject=[GitHub]%20Dev%20Connect) or visit [github/marleyschneiderr](https://github.com/marleyschneiderr). My name is Marley Schneider, and I am a 23-year-old full-stack web developer in practice. I graduated from Washington State University in May 2022 with a double major in Advertising and Web Development and am now pursuing a certificate in Web Development through this course. I aspire to be a UX/UI designer who designs websites that are both useful and visually appealing. 
+If you have questions, please send them [here](mailto:marleysue@gmail.com?subject=[GitHub]%20Dev%20Connect) or visit [github/marleyschneiderr](https://github.com/marleyschneiderr). My name is Marley Schneider, and I am a 23-year-old full-stack web developer in practice. I graduated from Washington State University in May 2022 with a double major in Advertising and Web Development and am now pursuing a certificate in Web Development through this course. I aspire to be a UX/UI designer who creates websites that are both useful and visually appealing. 
