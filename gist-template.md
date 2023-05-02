@@ -77,7 +77,7 @@ There are three bracket expressions throughout the matching an email regex.
 
 ### Character Classes
 
-Character classes are a set of characters surrounded by square brackets that describe the characters that will properly match a single character from a specified input string, in this case, within an email address. 
+Character classes are a set of characters surrounded by square brackets that describe the symbols that will properly match a single character from a specified input string, in this case, within an email address. 
 
 Example: The character class `[abc]` matches any single character that is either `a`, `b`, or `c`.
 
