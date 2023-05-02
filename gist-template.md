@@ -27,7 +27,7 @@ Email addresses are validated using this regular expression. The email address i
 
 The first anchor used in this regular expression is the `^` (caret) character. The `^` character signifies the start of the entire email string. It ensures that the pattern must match the beginning of the string, and nothing that comes before it. 
 
-The second anchor used in this regular expression is the $ (dollar sign) character. The $ character signifies the end of the entire email string. It makes sure that the pattern must match the end of the string, and nothing that comes after it.
+The second anchor used in this regular expression is the `$` character. The $ character signifies the end of the entire email string. It makes sure that the pattern must match the end of the string, and nothing that comes after it.
 
 Together, the `^` and `$` characters symbolize the start and end of the email string. Both characters guarantee that the whole string matches the email pattern, and nothing else. 
 
