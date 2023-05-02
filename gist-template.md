@@ -45,6 +45,17 @@ Throughout the matching an email regex, there are three quantifiers used:
 
 ### Grouping Constructs
 
+In regular expressions, grouping constructs are used to group together a series of characters or expressions, and they are ALWAYS wrapped in parenthesis. When using grouping constructs, a user can apply operators to the entire group rather than just one character or expression within the group.
+
+Example: Alteration - Within a group, you can specify alternative matching options by using the pipe symbol `|`. `(cat|dog)` would, for example, match either `"cat"` or `"dog"`.
+
+In the email sequence, there are 3 examples of grouping constructs:
+
+1) `([a-z0-9_\.-]+)`: This grouping construct creates a 'capturing group' that matches one or more lowercase letters, numbers, dots, or hyphens. This group represents the matching for the username section of an email address.
+
+2) `([\da-z\.-]+)`: This grouping construct creates a 'capturing group' that matches one or more lowercase letters, numbers, dots, hyphens, or underscores. This group represents the domain name portion of an email address.
+
+3) `([a-z\.]{2,6})`: This grouping construct creates a 'capturing group' that matches 2 - 6 lowercase letters or dots. This group represents the top-level domain (TLD) section of an email address (example: .com, .edu, .org, etc.)
 
 ### Bracket Expressions
 
@@ -91,6 +102,24 @@ Flags are optional parameters in regular expressions that change the behavior of
 Example: `s` - Known as dot-all, this expression allows the `.` character to match any character in the input, including newlines. Newlines are special characters used to represent the end of a line of text, indicating a link break in a file.
 
 ### Character Escapes
+
+Character escapes are a way of indicating that a particular character should be treated as a literal character rather than a special character with its regular expression meaning.
+
+Character escapes can be used in regular expressions to represent other characters that have specific meanings. For example, curly braces `({ hi })`, plus sign `(+)`, square brackets `([ hi ])`, question mark `(?)`, vertical bar `(|)`, and MORE.
+
+Example: The dot character `.` has a specific significance in a regular expression in that it matches any single character. If a user wants to match a literal dot character, they should use the character escape `\.`. The escape character (the backslash) instructs the regular expression engine to consider the following character (in this case, the dot) as a literal character rather than its regular expression meaning.
+
+In the email sequence, there are four character escapes used:
+
+1) `\d`: This character escape matches any number character (those that are equivalent to `[0-9]`).
+
+2) `\.`: This character escape matches a period character `.`. The backslash escapes the period due to the fact that the period is a special character in regular expressions that matches any character.
+
+3) `\-`: This character escape matches a hyphen character `-`. The hyphen is used as a literal character is escaped with a backslash as well. 
+
+4) `\[ and \]`: This character escape matches a square bracket character. The square brackets are used as literal characters and are also escaped with a backslash.
+
+Note: Some of these character escapes are used within character classes (i.e., inside square brackets), where they have slightly different meanings than outside of character classes. For example, the dot `.` matches a literal dot (period) within a character class, but it matches any character except a newline outside of a character class.
 
 ## Author
 
