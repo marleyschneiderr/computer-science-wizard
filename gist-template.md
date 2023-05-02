@@ -121,7 +121,7 @@ In the email sequence, there are four character escapes used:
 
 2) `\.`: This character escape matches a period character `.`. The backslash escapes the period due to the fact that the period is a special character in regular expressions that matches any character.
 
-3) `\-`: This character escape matches a hyphen character `-`. The hyphen is used as a literal character is escaped with a backslash as well. 
+3) `\-`: This character escape matches a hyphen character `-`. The hyphen is used as a literal character, which is escaped with a backslash as well. 
 
 4) `\[ and \]`: This character escape matches a square bracket character. The square brackets are used as literal characters and are also escaped with a backslash.
 
